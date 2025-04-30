@@ -1,84 +1,99 @@
+## 📦 Installation
 
-# Navigator.ba Smoke Test Suite
+1. **Clone the repository**:
 
-This repository contains automated smoke tests for the [Navigator.ba](https://www.navigator.ba) application using Playwright with the Page Object Model (POM) pattern.
+   ```bash
+   git clone https://github.com/SenadTopcic/navigator-smoke-tests.git
+   cd navigator-smoke-tests
+   ```
 
-## ✅ Technologies Used
-- [Playwright](https://playwright.dev/)
-- TypeScript
-- Page Object Model (POM)
+2. **Install dependencies**:
 
-## Requirements
-✅ Node.js 16 or higher is required to run this project. You can check your version with node -v. If Node.js is not installed, download it from https://nodejs.org
+   ```bash
+   npm install
+   ```
 
-## 📁 Project Structure
-```
-.
-├── pages/
-│   └── HomePage.ts       # Page object for homepage
-├── tests/
-│   └── smoke.spec.ts     # Smoke test cases
-├── README.md
-├── package.json
-├── tsconfig.json
-├── playwright.config.ts
-```
+3. **Install Playwright browsers** (important!):
 
-## 🚀 How to Run Tests Locally
+   ```bash
+   npx playwright install
+   ```
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/SenadTopcic/navigator-smoke-tests.git
-cd navigator-smoke-tests
-```
+   > ⚠️ This step is required for downloading the necessary browser binaries (Chromium, Firefox, WebKit).
 
-### 2. Install dependencies
-```bash
-npm install
-```
+## 🚀 Running Tests
 
-### 3. Run tests
+To run all smoke tests:
+
 ```bash
 npx playwright test
 ```
 
-### 4. View test report
+To run a specific test file:
+
+```bash
+npx playwright test tests/smoketest.spec.ts
+```
+
+To open the HTML report after running tests:
+
 ```bash
 npx playwright show-report
 ```
 
-### 5. Choose Browser
-    To run tests on a specific browser, navigate to playwright.config.ts and scroll to line 35 and below. Uncomment the desired browser configuration (e.g., Chromium, Firefox, or WebKit), and comment out the others. This allows you to control which browser the tests will run on
+## 🧪 Test Structure
 
-## 🧪 Included Smoke Tests
+- `pages/HomePage.ts`: Page Object Model file containing reusable locators and actions
+- `tests/smoketest.spec.ts`: Smoke tests using methods from `HomePage`
+- `playwright.config.ts`: Configuration file for Playwright (browser settings, timeouts, etc.)
 
-| Test | Description |
-|------|-------------|
-| Home page load | Verifies that the homepage loads successfully (status 200) |
-| Search | Tests search by pressing Enter and search icon |
-| Kreiraj objekat | Button click and left menu appearance |
-| Predloži ideju | Opens the correct feedback menu |
-| Social Media Links | Facebook, X, and G+ links open correct pages |
-| Language Switch | Verifies language changes between BS and EN |
-| Zoom Controls | Checks Zoom In/Out buttons exist and are clickable |
+## 🌐 Browser Configuration
 
-## ✅ Smoke Test Criteria
+In `playwright.config.ts`, from **line 35 and below**, you can **uncomment or comment** the browser(s) you want to run tests on:
 
-**Smoke tests include:**
-- Homepage loads
-- Search bar functions
-- Critical UI buttons (Kreiraj objekat, Predloži ideju) work
-- Language switch works
-- Main icons & zoom controls are present and functional
+```ts
+// Uncomment only the browsers you want to test:
+projects: [
+  { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+  // { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+  // { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+],
+```
 
-## 🐞 Bug Reporting
-If you encounter a bug during test execution, please include:
-- Steps to reproduce
-- Actual vs expected result
-- Screenshot if possible
+## 📋 Included Smoke Tests
 
-## 📄 License
-This project is for educational/demo purposes.
+- Home page loads successfully
+- Search bar accepts input and displays results
+- "Kreiraj objekat" button opens the form
+- "Predloži ideju" button works
+- Social media icons open correct links
+- Language switch between BS and EN
+- Zoom in/out buttons are visible and clickable
+
+## 🐞 Known Issues
+
+- **Google+ link test fails** due to the platform being deprecated.
+  - Steps to reproduce:
+    1. Run `npx playwright test`
+    2. Observe failure on the Google+ link test
+  - Fix: Remove or replace the test if no longer supported by the application.
+
+## 📁 Folder Structure
+
+```
+navigator-smoke-tests/
+├── pages/
+│   └── HomePage.ts
+├── tests/
+│   └── smoketest.spec.ts
+├── playwright.config.ts
+├── package.json
+├── README.md
+```
 
 ---
-Created by Senad Topcic
+
+## ✍️ Author
+
+Senad Topčić  
+GitHub: [@SenadTopcic](https://github.com/SenadTopcic)
