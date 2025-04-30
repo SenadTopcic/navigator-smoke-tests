@@ -8,6 +8,9 @@ This repository contains automated smoke tests for the [Navigator.ba](https://ww
 - TypeScript
 - Page Object Model (POM)
 
+## Requirements
+✅ Node.js 16 or higher is required to run this project. You can check your version with node -v. If Node.js is not installed, download it from https://nodejs.org
+
 ## 📁 Project Structure
 ```
 .
