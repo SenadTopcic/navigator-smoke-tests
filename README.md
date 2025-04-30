@@ -94,7 +94,7 @@ navigator-smoke-tests/
 │   └── HomePage.ts
 ├── tests/
 │   └── smoketest.spec.ts
-│── screenshots/            # Bug or failure screenshots
+│── test-results/            # test result
 ├── bug_reports/            # Bug report markdown files
 ├── playwright.config.ts
 ├── package.json
