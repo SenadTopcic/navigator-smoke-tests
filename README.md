@@ -44,6 +44,9 @@ npx playwright test
 npx playwright show-report
 ```
 
+### 5. Choose Browser
+    To run tests on a specific browser, navigate to playwright.config.ts and scroll to line 35 and below. Uncomment the desired browser configuration (e.g., Chromium, Firefox, or WebKit), and comment out the others. This allows you to control which browser the tests will run on
+
 ## 🧪 Included Smoke Tests
 
 | Test | Description |
@@ -75,4 +78,4 @@ If you encounter a bug during test execution, please include:
 This project is for educational/demo purposes.
 
 ---
-Created by [Your Name]
+Created by Senad Topcic
