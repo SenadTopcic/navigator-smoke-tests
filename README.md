@@ -78,6 +78,14 @@ projects: [
     2. Observe failure on the Google+ link test
   - Fix: Remove or replace the test if no longer supported by the application.
 
+## 🐞 Bug Reports
+
+Bug reports are stored in the `/bug_reports` folder. Example: `bug_report_google_plus.md` includes details and steps to reproduce a Google+ related issue.
+
+### 📸 Screenshots
+
+Screenshots related to test failures or bugs (like the G+ dead link) are stored in the `/screenshots` folder and are automatically captured by Playwright when implemented in the test.
+
 ## 📁 Folder Structure
 
 ```
@@ -86,6 +94,8 @@ navigator-smoke-tests/
 │   └── HomePage.ts
 ├── tests/
 │   └── smoketest.spec.ts
+│── screenshots/            # Bug or failure screenshots
+├── bug_reports/            # Bug report markdown files
 ├── playwright.config.ts
 ├── package.json
 ├── README.md
