@@ -122,7 +122,7 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 | TC10 | X (Twitter) link opens correct page | Click the X (Twitter) icon | New tab opens: `x.com/navigatorba` | Yes |
 | TC11 | Google+ link opens correct page | Click the Google+ icon | New tab opens: `plus.google.com` | Yes |
 | TC12 | Zoom buttons work | Click Zoom In, then Zoom Out | Map zooms in and out accordingly | No |
-| TC13 | Zoom using mouse scroll | Use mouse scroll on the map | Map zooms in and out | No |
+| TC13 |Zoom in and Zoom out buttons are present and clickable | Locate zoom + button and click, locate yoom - button and click | Zoom in buton are present and clickable | yes |
 | TC14 | Add working hours to a place | Enter working hours in the form and save | Working hours are saved and visible | No |
 | TC15 | Submit empty "Create Place" form | Leave the form empty and submit | Validation error is shown | No |
 | TC16 | Search with special characters | Type "!@#$%" into the search bar | No results or a friendly message is displayed | No |
@@ -133,12 +133,12 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 ## 📋 Included Smoke Tests 
 
-- Home page loads successfully  
-- Search bar input and results  
-- "Kreiraj objekat" (Create Place) button  
-- "Predloži ideju" (Suggest an idea) button  
-- Social media icons open correct links  
-- Language switch (BS ↔ EN)  
+- Home page loads successfully   TC01
+- Search bar input and results   TC02
+- "Kreiraj objekat" (Create Place) button  TC04
+- "Predloži ideju" (Suggest an idea) button  TC07
+- Social media icons open correct links  TC09 ,TC10 ,TC11 
+- Language switch (BS ↔ EN)  TC06
 - Zoom in/out functionality  
 
 ---
