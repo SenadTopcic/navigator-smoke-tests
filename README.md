@@ -152,7 +152,7 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 - TC15 – Submit empty form  
 - TC16 – Search using special characters  
 - TC17 – Invalid email validation 
-
+---
 ## 📋 Included Smoke Tests 
 
 - Home page loads successfully   TC01
