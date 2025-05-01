@@ -133,9 +133,8 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 | TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type     |
 |-------|-----------------------------|------------------------------------------------|---------------------------------------|----------|
-| TC06  | View category on hover      | Hover category icon                            | Tooltip or highlight shown            | Positive |
-| TC07  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | Positive |
-| TC08  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | Positive |
+| TC14  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | Positive |
+| TC15  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | Positive |
 
 ---
 
@@ -143,9 +142,9 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 | TC ID | Name                              | Steps (summary)                     | Expected Result                         | Type     |
 |-------|-----------------------------------|-------------------------------------|-----------------------------------------|----------|
-| TC09  | Submit empty Create form          | Leave form empty and submit         | Validation error shown                  | Negative |
-| TC10  | Search with special characters    | Type "!@#$%" in search              | No results / friendly message           | Negative |
-| TC11  | Add invalid email in form         | Enter wrong email and submit        | Validation message for invalid email    | Negative |
+| TC16  | Submit empty Create form          | Leave form empty and submit         | Validation error shown                  | Negative |
+| TC17  | Search with special characters    | Type "!@#$%" in search              | No results / friendly message           | Negative |
+| TC18  | Add invalid email in form         | Enter wrong email and submit        | Validation message for invalid email    | Negative |
 
 ---
 
