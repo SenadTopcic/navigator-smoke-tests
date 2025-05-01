@@ -111,26 +111,28 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 ### 🟩 Smoke Tests
 
-| TC ID | Name                                                         | Steps (summary)                                                                                                 | Expected Result                                  | 
-|-------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|------------------|
-| TC01  | Home page loads successfully                                 | Open web address www.navigator.ba                                                                               | Status code is 200                               |
-| TC02  | Search bar is clickable and accepts input via Enter and icon | 1. Open the website<br>2. Type "sarajevo" and press Enter<br>3. Type "fghf" and click search icon              | Search results appear for both inputs            |
-| TC03  | Filter by category (Food)                                    | Click “Food” category                                                                                           | Only food places shown on map                    | 
-| TC04  | Open Create Place form                                       | Click “Create place”                                                                                             | Form opens with inputs                           | 
-| TC05  | Create a new place                                           | Fill form with valid data and submit                                                                            | New place added to the map                       | 
-| TC06  | Language switch between BS and EN                            | Click “EN” to switch to English, then “BS” to switch back                                                       | UI language changes accordingly                  | 
-| TC07  | "Kreiraj objekat" button opens correct menu                  | Click the “+” icon                                                                                               | Left menu with "Kreiraj objekat" is visible      | 
-| TC08  | "Predloži ideju" button opens correct menu                   | Click the “Predloži ideju” icon                                                                                  | Menu with "Navigator po tvojoj mjeri" appears    | 
-| TC09  | Hovering Facebook icon reveals tooltip                       | Hover over Facebook icon                                                                                        | Tooltip or iframe with Like button is visible    |
-| TC10  | Facebook link opens correct page                             | Click on the Facebook icon                                                                                      | New tab opens with facebook.com/Navigator.ba     | 
-| TC11  | X (Twitter) link opens correct page                          | Click on the X (Twitter) icon                                                                                   | New tab opens with x.com/navigatorba             | 
-| TC12  | Google+ link opens correct page                              | Click on the Google+ icon                                                                                       | New tab opens with plus.google.com               | 
-| TC13  | Zoom in and Zoom out buttons are clickable                   | Click Zoom In, then Zoom Out buttons                                                                            | Map zooms in and out accordingly                 | 
-| TC14  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | 
-| TC15  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | 
-| TC16  | Submit empty Create form          | Leave form empty and submit         | Validation error shown                  |
-| TC17  | Search with special characters    | Type "!@#$%" in search              | No results / friendly message           |
-| TC18  | Add invalid email in form         | Enter wrong email and submit        | Validation message for invalid email    |
+## ✅ Test Cases for Navigator.ba
+
+| TC ID | Name | Steps (Summary) | Expected Result |
+|-------|------|------------------|-----------------|
+| TC01 | Home page loads successfully | Open web address `www.navigator.ba` | Status code is 200 |
+| TC02 | Search bar accepts input and responds | 1. Open the website<br>2. Type "sarajevo" and press Enter<br>3. Type "fghf" and click search icon | Search results appear for both inputs |
+| TC03 | Filter by category (Food) | Click the “Food” category | Only food places are shown on the map |
+| TC04 | Open "Create Place" form | Click “Create Place” | Form opens with all input fields visible |
+| TC05 | Create a new place | Fill in the form with valid data and submit | New place is added to the map |
+| TC06 | Switch language between BS and EN | Click “EN” to switch to English, then “BS” to switch back | UI language changes accordingly |
+| TC07 | "+ / Kreiraj objekat" button opens correct menu | Click the “+” icon | Left menu with “Kreiraj objekat” is displayed |
+| TC08 | "Predloži ideju" button opens suggestion menu | Click the “Predloži ideju” icon | Menu with “Navigator po tvojoj mjeri” appears |
+| TC09 | Facebook icon shows tooltip on hover | Hover over the Facebook icon | Tooltip or embedded Like button is visible |
+| TC10 | Facebook link opens correct page | Click the Facebook icon | New tab opens: `facebook.com/Navigator.ba` |
+| TC11 | X (Twitter) link opens correct page | Click the X (Twitter) icon | New tab opens: `x.com/navigatorba` |
+| TC12 | Google+ link opens correct page | Click the Google+ icon | New tab opens: `plus.google.com` |
+| TC13 | Zoom buttons work | Click Zoom In, then Zoom Out | Map zooms in and out accordingly |
+| TC14 | Zoom using map buttons | Use the + and - buttons on the map | Map zooms in and out |
+| TC15 | Add working hours to a place | Enter working hours in the form and save | Working hours are saved and visible |
+| TC16 | Submit empty "Create Place" form | Leave the form empty and submit | Validation error is shown |
+| TC17 | Search with special characters | Type "!@#$%" into the search bar | No results or a friendly message is displayed |
+| TC18 | Invalid email validation | Enter an invalid email in the form and submit | Validation message for invalid email is shown |
 
 ---
 
