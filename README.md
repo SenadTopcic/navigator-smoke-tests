@@ -126,13 +126,6 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 | TC11  | X (Twitter) link opens correct page                          | Click on the X (Twitter) icon                                                                                   | New tab opens with x.com/navigatorba             | Smoke / Positive |
 | TC12  | Google+ link opens correct page                              | Click on the Google+ icon                                                                                       | New tab opens with plus.google.com               | Smoke / Positive |
 | TC13  | Zoom in and Zoom out buttons are clickable                   | Click Zoom In, then Zoom Out buttons                                                                            | Map zooms in and out accordingly                 | Smoke / Positive |
-
----
-
-### 🟨 Positive Test Cases
-
-| TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type     |
-|-------|-----------------------------|------------------------------------------------|---------------------------------------|----------|
 | TC14  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | Positive |
 | TC15  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | Positive |
 
