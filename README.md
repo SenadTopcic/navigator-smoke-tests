@@ -111,18 +111,22 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 ### 🟩 Smoke Tests
 
-| TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type           |
-|-------|-----------------------------|------------------------------------------------|---------------------------------------|----------------|
-| TC01  | Home page loads successfully| OPen a web address www.navigator.ba            | Verify that the status code of the response is 200, indicating successful page load        | Smoke / Positive |
-| TC02  | Switch language to English  | Click “EN”                                     | UI switches to English                | Smoke / Positive |
-| TC03  | Filter by category (Food)   | Click “Food” category                          | Only food places shown on map         | Smoke / Positive |
-| TC04  | Open Create Place form      | Click “Create place”                           | Form opens with inputs                | Smoke / Positive |
-| TC05  | Create a new place          | Fill form with valid data and submit           | New place added to the map            | Smoke / Positive |
-| TC01  | Search for a location       | Search "Sarajevo"                              | Map shows results for Sarajevo        | Smoke / Positive |
-| TC02  | Switch language to English  | Click “EN”                                     | UI switches to English                | Smoke / Positive |
-| TC03  | Filter by category (Food)   | Click “Food” category                          | Only food places shown on map         | Smoke / Positive |
-| TC04  | Open Create Place form      | Click “Create place”                           | Form opens with inputs                | Smoke / Positive |
-| TC05  | Create a new place          | Fill form with valid data and submit           | New place added to the map            | Smoke / Positive |
+| TC ID | Name                                                         | Steps (summary)                                                                                                 | Expected Result                                  | Type             |
+|-------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|------------------|
+| TC01  | Home page loads successfully                                 | Open web address www.navigator.ba                                                                               | Status code is 200                               | Smoke / Positive |
+| TC02  | Search bar is clickable and accepts input via Enter and icon | 1. Open the website<br>2. Type "sarajevo" and press Enter<br>3. Type "fghf" and click search icon              | Search results appear for both inputs            | Smoke / Positive |
+| TC03  | Filter by category (Food)                                    | Click “Food” category                                                                                           | Only food places shown on map                    | Smoke / Positive |
+| TC04  | Open Create Place form                                       | Click “Create place”                                                                                             | Form opens with inputs                           | Smoke / Positive |
+| TC05  | Create a new place                                           | Fill form with valid data and submit                                                                            | New place added to the map                       | Smoke / Positive |
+| TC06  | Language switch between BS and EN                            | Click “EN” to switch to English, then “BS” to switch back                                                       | UI language changes accordingly                  | Smoke / Positive |
+| TC07  | "Kreiraj objekat" button opens correct menu                  | Click the “+” icon                                                                                               | Left menu with "Kreiraj objekat" is visible      | Smoke / Positive |
+| TC08  | "Predloži ideju" button opens correct menu                   | Click the “Predloži ideju” icon                                                                                  | Menu with "Navigator po tvojoj mjeri" appears    | Smoke / Positive |
+| TC09  | Hovering Facebook icon reveals tooltip                       | Hover over Facebook icon                                                                                        | Tooltip or iframe with Like button is visible    | Smoke / Positive |
+| TC10  | Facebook link opens correct page                             | Click on the Facebook icon                                                                                      | New tab opens with facebook.com/Navigator.ba     | Smoke / Positive |
+| TC11  | X (Twitter) link opens correct page                          | Click on the X (Twitter) icon                                                                                   | New tab opens with x.com/navigatorba             | Smoke / Positive |
+| TC12  | Google+ link opens correct page                              | Click on the Google+ icon                                                                                       | New tab opens with plus.google.com               | Smoke / Positive |
+| TC13  | Zoom in and Zoom out buttons are clickable                   | Click Zoom In, then Zoom Out buttons                                                                            | Map zooms in and out accordingly                 | Smoke / Positive |
+
 ---
 
 ### 🟨 Positive Test Cases
