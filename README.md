@@ -1,3 +1,200 @@
+
+
+
+## 🧪 Test Plan & Test Cases
+
+### 1. Introduction
+
+The purpose of this test effort is to validate the core functionalities of the [Navigator.ba](https://www.navigator.ba) application. This includes:
+
+- Search functionality
+- Category filtering
+- Form creation
+- Language switching
+- Social media interactions
+
+Tests are written using **Playwright** and follow the **Page Object Model (POM)** structure.
+
+---
+
+### 2. Scope of Testing
+
+✅ **In Scope**:
+- Header: search, language switch, forms, social icons  
+- Category filtering and display  
+- Display of user-created and categorized POIs  
+
+❌ **Out of Scope**:
+- Backend/database validations  
+- Mobile responsiveness  
+- Accessibility testing (WCAG)
+
+---
+
+### 3. Objectives
+
+- Verify that core features work
+- Automate critical smoke test scenarios
+- Cover positive and negative test cases
+- Deliver a working Playwright setup with documentation and bug reports
+
+---
+
+### 4. Testing Approach
+
+- **Manual testing** to explore and identify test cases
+- **Smoke testing** for core path validation
+- **Automation** of smoke tests in Playwright (TypeScript)
+- **POM design pattern** for maintainability
+
+---
+
+### 5. Test Schedule
+
+| Task                         | Duration       |
+|------------------------------|----------------|
+| Application analysis         | 1 day          |
+| Test case writing            | 1 day          |
+| Smoke test identification    | 0.5 day        |
+| Automation of smoke tests    | 2 days         |
+| README & GitHub publication  | 0.5 day        |
+| Bug reporting                | As discovered  |
+
+---
+
+### 6. Test Environment
+
+- **OS:** Windows 10  
+- **Browser:** Chrome (latest)  
+- **Tools:**  
+  - Playwright  
+  - GitHub  
+  - Manual testing for bugs  
+
+---
+
+### 7. Deliverables
+
+- ✅ Test Plan (this section)  
+- ✅ Test Cases (manual + automated)  
+- ✅ Smoke test suite (Playwright)  
+- ✅ GitHub repo with:
+  - Source code
+  - README
+- ✅ Bug reports with repro steps  
+
+---
+
+### 8. Risks & Mitigations
+
+| Risk                              | Mitigation                                 |
+|-----------------------------------|--------------------------------------------|
+| App changes during testing        | Communicate with dev team; update README   |
+| Network/app instability           | Retry and log flaky behavior               |
+| Limited test data coverage        | Use various inputs and edge cases          |
+
+---
+
+### 9. Entry / Exit Criteria
+
+**Entry Criteria**:
+- Application is accessible at https://www.navigator.ba
+
+**Exit Criteria**:
+- All smoke tests executed
+- No critical/blocker bugs remain
+- GitHub repo is complete and documented
+
+---
+
+## ✅ Test Cases
+
+### 🟩 Smoke Tests
+
+| TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type           |
+|-------|-----------------------------|------------------------------------------------|---------------------------------------|----------------|
+| TC01  | Search for a location       | Search "Sarajevo"                              | Map shows results for Sarajevo        | Smoke / Positive |
+| TC02  | Switch language to English  | Click “EN”                                     | UI switches to English                | Smoke / Positive |
+| TC03  | Filter by category (Food)   | Click “Food” category                          | Only food places shown on map         | Smoke / Positive |
+| TC04  | Open Create Place form      | Click “Create place”                           | Form opens with inputs                | Smoke / Positive |
+| TC05  | Create a new place          | Fill form with valid data and submit           | New place added to the map            | Smoke / Positive |
+
+---
+
+### 🟨 Positive Test Cases
+
+| TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type     |
+|-------|-----------------------------|------------------------------------------------|---------------------------------------|----------|
+| TC06  | View category on hover      | Hover category icon                            | Tooltip or highlight shown            | Positive |
+| TC07  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | Positive |
+| TC08  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | Positive |
+
+---
+
+### 🟥 Negative Test Cases
+
+| TC ID | Name                              | Steps (summary)                     | Expected Result                         | Type     |
+|-------|-----------------------------------|-------------------------------------|-----------------------------------------|----------|
+| TC09  | Submit empty Create form          | Leave form empty and submit         | Validation error shown                  | Negative |
+| TC10  | Search with special characters    | Type "!@#$%" in search              | No results / friendly message           | Negative |
+| TC11  | Add invalid email in form         | Enter wrong email and submit        | Validation message for invalid email    | Negative |
+
+---
+
+## 📋 Included Smoke Tests
+
+- Home page loads successfully  
+- Search bar input and results  
+- "Kreiraj objekat" (Create Place) button  
+- "Predloži ideju" (Suggest an idea) button  
+- Social media icons open correct links  
+- Language switch (BS ↔ EN)  
+- Zoom in/out functionality  
+
+---
+
+## 🐞 Known Issues
+
+- **Google+ icon test fails** (platform is deprecated).  
+  - **Repro:** Run test suite → failure on social media icon  
+  - **Suggestion:** Remove or update this test case
+
+---
+
+## 🐞 Bug Reports
+
+Stored in the `/bug_reports` folder.  
+E.g., `bug_report_google_plus.md` documents a deprecated icon issue.
+
+---
+
+### 📸 Screenshots
+
+Failure screenshots (when enabled in tests) are stored in `/screenshots`.
+
+---
+
+## 📁 Folder Structure
+
+```
+navigator-smoke-tests/
+├── pages/
+│   └── HomePage.ts
+├── tests/
+│   └── smoketest.spec.ts
+├── bug_reports/
+├── screenshots/
+├── test-results/
+├── playwright.config.ts
+├── package.json
+├── README.md
+```
+
+---
+
+
+# 🚦 Navigator.ba Smoke Test Automation
+
 ## 📦 Installation
 
 1. **Clone the repository**:
@@ -13,95 +210,38 @@
    npm install
    ```
 
-3. **Install Playwright browsers** (important!):
+3. **Install Playwright browsers** (required step):
 
    ```bash
    npx playwright install
    ```
 
-   > ⚠️ This step is required for downloading the necessary browser binaries (Chromium, Firefox, WebKit).
+   > ⚠️ This downloads the necessary browser binaries (Chromium, Firefox, WebKit).
+
+---
 
 ## 🚀 Running Tests
 
-To run all smoke tests:
+Run all smoke tests:
 
 ```bash
 npx playwright test
 ```
 
-To run a specific test file:
+Run a specific test file:
 
 ```bash
 npx playwright test tests/smoketest.spec.ts
 ```
 
-To open the HTML report after running tests:
+Open the HTML report after tests:
 
 ```bash
 npx playwright show-report
 ```
 
-## 🧪 Test Structure
-
-- `pages/HomePage.ts`: Page Object Model file containing reusable locators and actions
-- `tests/smoketest.spec.ts`: Smoke tests using methods from `HomePage`
-- `playwright.config.ts`: Configuration file for Playwright (browser settings, timeouts, etc.)
-
-## 🌐 Browser Configuration
-
-In `playwright.config.ts`, from **line 35 and below**, you can **uncomment or comment** the browser(s) you want to run tests on:
-
-```ts
-// Uncomment only the browsers you want to test:
-projects: [
-  { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-  // { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-  // { name: 'webkit', use: { ...devices['Desktop Safari'] } },
-],
-```
-
-## 📋 Included Smoke Tests
-
-- Home page loads successfully
-- Search bar accepts input and displays results
-- "Kreiraj objekat" button opens the form
-- "Predloži ideju" button works
-- Social media icons open correct links
-- Language switch between BS and EN
-- Zoom in/out buttons are visible and clickable
-
-## 🐞 Known Issues
-
-- **Google+ link test fails** due to the platform being deprecated.
-  - Steps to reproduce:
-    1. Run `npx playwright test`
-    2. Observe failure on the Google+ link test
-  - Fix: Remove or replace the test if no longer supported by the application.
-
-## 🐞 Bug Reports
-
-Bug reports are stored in the `/bug_reports` folder. Example: `bug_report_google_plus.md` includes details and steps to reproduce a Google+ related issue.
-
-### 📸 Screenshots
-
-Screenshots related to test failures or bugs (like the G+ dead link) are stored in the `/screenshots` folder and are automatically captured by Playwright when implemented in the test.
-
-## 📁 Folder Structure
-
-```
-navigator-smoke-tests/
-├── pages/
-│   └── HomePage.ts
-├── tests/
-│   └── smoketest.spec.ts
-│── test-results/            # test result
-├── bug_reports/            # Bug report markdown files
-├── playwright.config.ts
-├── package.json
-├── README.md
-```
-
 ---
+
 
 ## ✍️ Author
 
