@@ -130,6 +130,28 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 
 ---
+## ✅ Positive & ❌ Negative Test Cases
+
+### ✅ Positive Test Cases
+- TC01 – Home page loads successfully  
+- TC02 – Search bar input and results  
+- TC03 – Category filtering (Food)  
+- TC04 – "Kreiraj objekat" button opens menu  
+- TC05 – Create a new place with valid data  
+- TC06 – Language switch works correctly  
+- TC07 – "Predloži ideju" menu opens  
+- TC08 – Facebook tooltip appears on hover  
+- TC09 – Facebook link works  
+- TC10 – X (Twitter) link works  
+- TC11 – Google+ link works (test fails due to deprecation, but logic is positive)  
+- TC12 – Zoom buttons function  
+- TC13 – Zoom buttons are present and clickable  
+- TC14 – Add working hours to a place  
+
+### ❌ Negative Test Cases
+- TC15 – Submit empty form  
+- TC16 – Search using special characters  
+- TC17 – Invalid email validation 
 
 ## 📋 Included Smoke Tests 
 
