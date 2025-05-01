@@ -165,7 +165,7 @@ E.g., `bug_report_google_plus.md` documents a deprecated icon issue.
 
 ### 📸 Screenshots
 
-Failure screenshots (when enabled in tests) are stored in `/screenshots`.
+Failure screenshots (when enabled in tests) are stored in inside bugreport md file.
 
 ---
 
