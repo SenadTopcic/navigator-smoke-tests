@@ -53,12 +53,12 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 | Task                         | Duration       |
 |------------------------------|----------------|
-| Application analysis         | 1 day          |
-| Test case writing            | 1 day          |
-| Smoke test identification    | 0.5 day        |
-| Automation of smoke tests    | 2 days         |
-| README & GitHub publication  | 0.5 day        |
-| Bug reporting                | As discovered  |
+| Application analysis         |30.04.2025         |
+| Test case writing            |30.04.2025         |
+| Smoke test identification    | 30.04.2025       |
+| Automation of smoke tests    | 30.04.2025         |
+| README & GitHub publication  | 01.05.2025.       |
+| Bug reporting                | 01.05.2025. |
 
 ---
 
@@ -128,13 +128,6 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 | TC13  | Zoom in and Zoom out buttons are clickable                   | Click Zoom In, then Zoom Out buttons                                                                            | Map zooms in and out accordingly                 | Smoke / Positive |
 | TC14  | Zoom map                    | Use + / - zoom buttons                         | Map zooms in/out                      | Positive |
 | TC15  | Add working hours to place  | Fill working hours in form                     | Saved and visible                     | Positive |
-
----
-
-### 🟥 Negative Test Cases
-
-| TC ID | Name                              | Steps (summary)                     | Expected Result                         | Type     |
-|-------|-----------------------------------|-------------------------------------|-----------------------------------------|----------|
 | TC16  | Submit empty Create form          | Leave form empty and submit         | Validation error shown                  | Negative |
 | TC17  | Search with special characters    | Type "!@#$%" in search              | No results / friendly message           | Negative |
 | TC18  | Add invalid email in form         | Enter wrong email and submit        | Validation message for invalid email    | Negative |
