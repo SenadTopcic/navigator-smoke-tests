@@ -119,27 +119,26 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 |-------|------|------------------|-----------------|-----------|
 | TC01 | Home page loads successfully | Open web address `www.navigator.ba` | Status code is 200 | Yes |
 | TC02 | Search bar accepts input and responds | 1. Open the website<br>2. Type "sarajevo" and press Enter<br>3. Type "fghf" and click search icon | Search results appear for both inputs | Yes |
-| TC03 | Filter by category (Food) | Click the “Food” category | Only food places are shown on the map | Yes |
-| TC04 | Open "Create Place" form | Click “Create Place” | Form opens with all input fields visible | Yes |
-| TC05 | Create a new place | Fill in the form with valid data and submit | New place is added to the map | Yes |
+| TC03 | Filter by category (Food) | Click the “Food” category | Only food places are shown on the map | No |
+| TC04 | Kreiraj objekat button in menu is clickable and opens the correct menu | Click the “+ Kreiraj objekat” | Left menu with “Kreiraj objekat” is displayed | Yes |
+| TC05 | Create a new place | Fill in the form with valid data and submit | New place is added to the map | No |
 | TC06 | Switch language between BS and EN | Click “EN” to switch to English, then “BS” to switch back | UI language changes accordingly | Yes |
-| TC07 | "+ / Kreiraj objekat" button opens correct menu | Click the “+” icon | Left menu with “Kreiraj objekat” is displayed | Yes |
-| TC08 | "Predloži ideju" button opens suggestion menu | Click the “Predloži ideju” icon | Menu with “Navigator po tvojoj mjeri” appears | Yes |
-| TC09 | Facebook icon shows tooltip on hover | Hover over the Facebook icon | Tooltip or embedded Like button is visible | Yes |
-| TC10 | Facebook link opens correct page | Click the Facebook icon | New tab opens: `facebook.com/Navigator.ba` | Yes |
-| TC11 | X (Twitter) link opens correct page | Click the X (Twitter) icon | New tab opens: `x.com/navigatorba` | Yes |
-| TC12 | Google+ link opens correct page | Click the Google+ icon | New tab opens: `plus.google.com` | Yes |
-| TC13 | Zoom buttons work | Click Zoom In, then Zoom Out | Map zooms in and out accordingly | Yes |
-| TC14 | Zoom using map buttons | Use the + and - buttons on the map | Map zooms in and out | Yes |
-| TC15 | Add working hours to a place | Enter working hours in the form and save | Working hours are saved and visible | Yes |
-| TC16 | Submit empty "Create Place" form | Leave the form empty and submit | Validation error is shown | Yes |
-| TC17 | Search with special characters | Type "!@#$%" into the search bar | No results or a friendly message is displayed | Yes |
-| TC18 | Invalid email validation | Enter an invalid email in the form and submit | Validation message for invalid email is shown | Yes |
+| TC07 | "Predloži ideju - Pošalji komentar" button in menu is clickable and opens the correct menu | Click the “Predloži ideju - Pošalji komentar” button | Menu with “Navigator po tvojoj mjeri” appears | Yes |
+| TC08 | Facebook icon shows tooltip on hover | Hover over the Facebook icon | Tooltip or embedded Like button is visible | Yes |
+| TC09 | Facebook link opens correct page | Click the Facebook icon | New tab opens: `facebook.com/Navigator.ba` | Yes |
+| TC10 | X (Twitter) link opens correct page | Click the X (Twitter) icon | New tab opens: `x.com/navigatorba` | Yes |
+| TC11 | Google+ link opens correct page | Click the Google+ icon | New tab opens: `plus.google.com` | Yes |
+| TC12 | Zoom buttons work | Click Zoom In, then Zoom Out | Map zooms in and out accordingly | No |
+| TC13 | Zoom using mouse scroll | Use mouse scroll on the map | Map zooms in and out | No |
+| TC14 | Add working hours to a place | Enter working hours in the form and save | Working hours are saved and visible | No |
+| TC15 | Submit empty "Create Place" form | Leave the form empty and submit | Validation error is shown | No |
+| TC16 | Search with special characters | Type "!@#$%" into the search bar | No results or a friendly message is displayed | No |
+| TC17 | Invalid email validation | Enter an invalid email in the form and submit | Validation message for invalid email is shown | No |
 
 
 ---
 
-## 📋 Included Smoke Tests
+## 📋 Included Smoke Tests 
 
 - Home page loads successfully  
 - Search bar input and results  
