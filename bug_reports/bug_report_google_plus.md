@@ -14,7 +14,7 @@ Clicking on the Google+ icon in the footer/header opens a dead or invalid page. 
 ---
 
 ## ✅ Expected Result:
-- The G+ icon should either be removed or redirect to a valid, active social media page.
+- The G+ icon should redirect to google plus site.
 
 ---
 
@@ -22,6 +22,8 @@ Clicking on the Google+ icon in the footer/header opens a dead or invalid page. 
 - Clicking the G+ icon opens:  
   `https://plus.google.com`  
   ...which leads to a dead/retired service page or a general Google account page.
+Screenshot
+![image](https://github.com/user-attachments/assets/ce2c0e85-5fd5-4482-8443-8eaed0296ff6)
 
 ---
 
