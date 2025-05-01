@@ -113,12 +113,16 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 | TC ID | Name                        | Steps (summary)                                | Expected Result                       | Type           |
 |-------|-----------------------------|------------------------------------------------|---------------------------------------|----------------|
+| TC01  | Home page loads successfully| OPen a web address www.navigator.ba            | Verify that the status code of the response is 200, indicating successful page load        | Smoke / Positive |
+| TC02  | Switch language to English  | Click “EN”                                     | UI switches to English                | Smoke / Positive |
+| TC03  | Filter by category (Food)   | Click “Food” category                          | Only food places shown on map         | Smoke / Positive |
+| TC04  | Open Create Place form      | Click “Create place”                           | Form opens with inputs                | Smoke / Positive |
+| TC05  | Create a new place          | Fill form with valid data and submit           | New place added to the map            | Smoke / Positive |
 | TC01  | Search for a location       | Search "Sarajevo"                              | Map shows results for Sarajevo        | Smoke / Positive |
 | TC02  | Switch language to English  | Click “EN”                                     | UI switches to English                | Smoke / Positive |
 | TC03  | Filter by category (Food)   | Click “Food” category                          | Only food places shown on map         | Smoke / Positive |
 | TC04  | Open Create Place form      | Click “Create place”                           | Form opens with inputs                | Smoke / Positive |
 | TC05  | Create a new place          | Fill form with valid data and submit           | New place added to the map            | Smoke / Positive |
-
 ---
 
 ### 🟨 Positive Test Cases
