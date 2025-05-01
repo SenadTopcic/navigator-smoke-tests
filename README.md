@@ -1,6 +1,4 @@
 
-
-
 ## 🧪 Test Plan & Test Cases
 
 ### 1. Introduction
@@ -107,11 +105,6 @@ Tests are written using **Playwright** and follow the **Page Object Model (POM)*
 
 ---
 
-## ✅ Test Cases
-
-### 🟩 Smoke Tests
-
-## ✅ Test Cases for Navigator.ba
 
 ## ✅ Test Cases for Navigator.ba
 
